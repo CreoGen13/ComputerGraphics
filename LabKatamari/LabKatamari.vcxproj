@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{51f80fbc-a7d4-484a-a8a7-242ea677a0b6}</ProjectGuid>
+    <RootNamespace>Direct3D11ITMOpractice</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>LabKatamari</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="LabKatamari\SimpleMath.inl" />
+    <None Include="Shaders\Base3d.hlsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Shaders\Csm.hlsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LabKatamari\BaseRenderComponent.cpp" />
+    <ClCompile Include="LabKatamari\Camera.cpp" />
+    <ClCompile Include="LabKatamari\DDSTextureLoader.cpp" />
+    <ClCompile Include="LabKatamari\Delegates.cpp" />
+    <ClCompile Include="LabKatamari\DirectionalLight.cpp" />
+    <ClCompile Include="LabKatamari\DirectXHelpers.cpp" />
+    <ClCompile Include="LabKatamari\DisplayWin32.cpp" />
+    <ClCompile Include="LabKatamari\FPSCameraController.cpp" />
+    <ClCompile Include="LabKatamari\Game.cpp" />
+    <ClCompile Include="LabKatamari\GameComponent.cpp" />
+    <ClCompile Include="LabKatamari\GridComponent.cpp" />
+    <ClCompile Include="LabKatamari\InputDevice.cpp" />
+    <ClCompile Include="LabKatamari\KatamariBall.cpp" />
+    <ClCompile Include="LabKatamari\PropComponent.cpp" />
+    <ClCompile Include="LabKatamari\LabKatamari.cpp" />
+    <ClCompile Include="LabKatamari\MeshRenderComponent.cpp" />
+    <ClCompile Include="LabKatamari\MySuper3DApp.cpp" />
+    <ClCompile Include="LabKatamari\OrbitCameraController.cpp" />
+    <ClCompile Include="LabKatamari\QuadComponent.cpp" />
+    <ClCompile Include="LabKatamari\ResourceFactory.cpp" />
+    <ClCompile Include="LabKatamari\SimpleMath.cpp" />
+    <ClCompile Include="LabKatamari\SphereComponent.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LabKatamari\BaseRenderComponent.h" />
+    <ClInclude Include="LabKatamari\Camera.h" />
+    <ClInclude Include="LabKatamari\DDS.h" />
+    <ClInclude Include="LabKatamari\DDSTextureLoader.h" />
+    <ClInclude Include="LabKatamari\Delegates.h" />
+    <ClInclude Include="LabKatamari\DirectionalLight.h" />
+    <ClInclude Include="LabKatamari\DirectXHelpers.h" />
+    <ClInclude Include="LabKatamari\DisplayWin32.h" />
+    <ClInclude Include="LabKatamari\Effects.h" />
+    <ClInclude Include="LabKatamari\FPSCameraController.h" />
+    <ClInclude Include="LabKatamari\Game.h" />
+    <ClInclude Include="LabKatamari\GameComponent.h" />
+    <ClInclude Include="LabKatamari\GridComponent.h" />
+    <ClInclude Include="LabKatamari\InputDevice.h" />
+    <ClInclude Include="LabKatamari\KatamariBall.h" />
+    <ClInclude Include="LabKatamari\PropComponent.h" />
+    <ClInclude Include="LabKatamari\LabKatamari.h" />
+    <ClInclude Include="LabKatamari\Keys.h" />
+    <ClInclude Include="LabKatamari\LoaderHelpers.h" />
+    <ClInclude Include="LabKatamari\MeshRenderComponent.h" />
+    <ClInclude Include="LabKatamari\OrbitCameraController.h" />
+    <ClInclude Include="LabKatamari\PerSceneCb.h" />
+    <ClInclude Include="LabKatamari\PlatformHelpers.h" />
+    <ClInclude Include="LabKatamari\QuadComponent.h" />
+    <ClInclude Include="LabKatamari\ResourceFactory.h" />
+    <ClInclude Include="LabKatamari\SimpleMath.h" />
+    <ClInclude Include="LabKatamari\SphereComponent.h" />
+    <ClInclude Include="LabKatamari\Vertex.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <VcpkgInstalledDir>E:\Library\Documents\vcpkg</VcpkgInstalledDir>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnableManifest>false</VcpkgEnableManifest>
+  </PropertyGroup>
+</Project>
