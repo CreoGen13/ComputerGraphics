@@ -1,7 +1,7 @@
 ﻿#pragma once
 
 #include <vector>
-#include "GameComponent.h"
+#include "BaseGameComponent.h"
 #include <d3d.h>
 #include <d3d11.h>
 #include <d3dcompiler.h>
@@ -11,7 +11,7 @@
 
 class Game;
 
-class BaseRenderComponent : public GameComponent
+class BaseRenderComponent : public BaseGameComponent
 {
 public:
     struct CbDataPerObject

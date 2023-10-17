@@ -8,10 +8,10 @@
 #include <directxmath.h>
 #include <chrono>
 #include "Camera.h"
-#include "GameComponent.h"
+#include "BaseGameComponent.h"
 #include "DisplayWin32.h"
 #include "InputDevice.h"
-#include "PerSceneCb.h"
+#include "SceneConstantBuffer.h"
 #include "DirectionalLight.h"
 
 #pragma comment(lib, "d3d11.lib")
@@ -53,13 +53,13 @@ protected:
 	Microsoft::WRL::ComPtr<ID3D11DepthStencilView> depthShadowDsv_;
 	Microsoft::WRL::ComPtr<ID3D11ShaderResourceView> depthShadowSrv_;
 	Microsoft::WRL::ComPtr<ID3D11Buffer> perSceneCBuffer_;
-	PerSceneCb sceneData_{};
+	SceneConstantBuffer sceneData_{};
 	DirectionalLight dLight_;
 	bool screenResized_{};
 	Microsoft::WRL::ComPtr<IDXGISwapChain> swapChain_;
 	float totalTime_{};
 	float deltaTime_{};
-	std::vector<GameComponent*> components_{};
+	std::vector<BaseGameComponent*> components_{};
 	std::shared_ptr<DisplayWin32> display_;
 	std::shared_ptr<InputDevice> inputDevice_;
 	std::shared_ptr<Camera> camera_;

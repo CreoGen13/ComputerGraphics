@@ -27,11 +27,20 @@
     <Filter Include="GameComponents">
       <UniqueIdentifier>{b10a8918-f313-466f-99b4-76a2ca04bf34}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Components">
+      <UniqueIdentifier>{af2d25e7-90e0-4685-a12a-4ff1c19ee53e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Components\Base">
+      <UniqueIdentifier>{1218f585-e734-40b7-ac59-3a6aa934a338}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Loader">
+      <UniqueIdentifier>{c7980883-1574-49bf-9bf9-b91fbcc79e35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\StructsAndEnums">
+      <UniqueIdentifier>{68c4865c-0507-4dfd-a63c-3f71c67efc07}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LabKatamari\BaseRenderComponent.cpp">
-      <Filter>Engine</Filter>
-    </ClCompile>
     <ClCompile Include="LabKatamari\Camera.cpp">
       <Filter>Engine</Filter>
     </ClCompile>
@@ -41,28 +50,19 @@
     <ClCompile Include="LabKatamari\DirectionalLight.cpp">
       <Filter>Engine</Filter>
     </ClCompile>
-    <ClCompile Include="LabKatamari\DirectXHelpers.cpp">
-      <Filter>Utils</Filter>
-    </ClCompile>
     <ClCompile Include="LabKatamari\DisplayWin32.cpp">
       <Filter>Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="LabKatamari\FPSCameraController.cpp">
-      <Filter>GameComponents</Filter>
     </ClCompile>
     <ClCompile Include="LabKatamari\Game.cpp">
       <Filter>Engine</Filter>
     </ClCompile>
-    <ClCompile Include="LabKatamari\GameComponent.cpp">
-      <Filter>Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="LabKatamari\GridComponent.cpp">
+    <ClCompile Include="LabKatamari\WireframeComponent.cpp">
       <Filter>GameComponents</Filter>
     </ClCompile>
     <ClCompile Include="LabKatamari\InputDevice.cpp">
       <Filter>Engine</Filter>
     </ClCompile>
-    <ClCompile Include="LabKatamari\KatamariBall.cpp">
+    <ClCompile Include="LabKatamari\Katamari.cpp">
       <Filter>GameComponents</Filter>
     </ClCompile>
     <ClCompile Include="LabKatamari\PropComponent.cpp">
@@ -71,35 +71,41 @@
     <ClCompile Include="LabKatamari\LabKatamari.cpp">
       <Filter>Game</Filter>
     </ClCompile>
-    <ClCompile Include="LabKatamari\MeshRenderComponent.cpp">
-      <Filter>Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="LabKatamari\DDSTextureLoader.cpp">
-      <Filter>Utils</Filter>
-    </ClCompile>
     <ClCompile Include="LabKatamari\MySuper3DApp.cpp">
       <Filter>Game</Filter>
     </ClCompile>
-    <ClCompile Include="LabKatamari\OrbitCameraController.cpp">
+    <ClCompile Include="LabKatamari\KatamariCameraController.cpp">
       <Filter>GameComponents</Filter>
-    </ClCompile>
-    <ClCompile Include="LabKatamari\QuadComponent.cpp">
-      <Filter>Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="LabKatamari\ResourceFactory.cpp">
-      <Filter>Utils</Filter>
     </ClCompile>
     <ClCompile Include="LabKatamari\SimpleMath.cpp">
       <Filter>Utils</Filter>
     </ClCompile>
+    <ClCompile Include="LabKatamari\BaseRenderComponent.cpp">
+      <Filter>Engine\Components\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="LabKatamari\BaseGameComponent.cpp">
+      <Filter>Engine\Components\Base</Filter>
+    </ClCompile>
     <ClCompile Include="LabKatamari\SphereComponent.cpp">
-      <Filter>Engine</Filter>
+      <Filter>Engine\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="LabKatamari\QuadComponent.cpp">
+      <Filter>Engine\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="LabKatamari\MeshRenderComponent.cpp">
+      <Filter>Engine\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="LabKatamari\DDSTextureLoader.cpp">
+      <Filter>Utils\Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="LabKatamari\DirectXHelpers.cpp">
+      <Filter>Utils\Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="LabKatamari\ResourceFactory.cpp">
+      <Filter>Utils\Loader</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="LabKatamari\BaseRenderComponent.h">
-      <Filter>Engine</Filter>
-    </ClInclude>
     <ClInclude Include="LabKatamari\Camera.h">
       <Filter>Engine</Filter>
     </ClInclude>
@@ -109,31 +115,22 @@
     <ClInclude Include="LabKatamari\DirectionalLight.h">
       <Filter>Engine</Filter>
     </ClInclude>
-    <ClInclude Include="LabKatamari\DirectXHelpers.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
     <ClInclude Include="LabKatamari\DisplayWin32.h">
       <Filter>Engine</Filter>
     </ClInclude>
     <ClInclude Include="LabKatamari\Effects.h">
       <Filter>Utils</Filter>
     </ClInclude>
-    <ClInclude Include="LabKatamari\FPSCameraController.h">
-      <Filter>GameComponents</Filter>
-    </ClInclude>
     <ClInclude Include="LabKatamari\Game.h">
       <Filter>Engine</Filter>
     </ClInclude>
-    <ClInclude Include="LabKatamari\GameComponent.h">
-      <Filter>Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="LabKatamari\GridComponent.h">
+    <ClInclude Include="LabKatamari\WireframeComponent.h">
       <Filter>GameComponents</Filter>
     </ClInclude>
     <ClInclude Include="LabKatamari\InputDevice.h">
       <Filter>Engine</Filter>
     </ClInclude>
-    <ClInclude Include="LabKatamari\KatamariBall.h">
+    <ClInclude Include="LabKatamari\Katamari.h">
       <Filter>GameComponents</Filter>
     </ClInclude>
     <ClInclude Include="LabKatamari\PropComponent.h">
@@ -142,44 +139,53 @@
     <ClInclude Include="LabKatamari\LabKatamari.h">
       <Filter>Game</Filter>
     </ClInclude>
-    <ClInclude Include="LabKatamari\Keys.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="LabKatamari\LoaderHelpers.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="LabKatamari\MeshRenderComponent.h">
-      <Filter>Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="LabKatamari\DDS.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="LabKatamari\DDSTextureLoader.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="LabKatamari\OrbitCameraController.h">
+    <ClInclude Include="LabKatamari\KatamariCameraController.h">
       <Filter>GameComponents</Filter>
-    </ClInclude>
-    <ClInclude Include="LabKatamari\PerSceneCb.h">
-      <Filter>Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="LabKatamari\PlatformHelpers.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="LabKatamari\QuadComponent.h">
-      <Filter>Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="LabKatamari\ResourceFactory.h">
-      <Filter>Utils</Filter>
     </ClInclude>
     <ClInclude Include="LabKatamari\SimpleMath.h">
       <Filter>Utils</Filter>
     </ClInclude>
+    <ClInclude Include="LabKatamari\BaseRenderComponent.h">
+      <Filter>Engine\Components\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="LabKatamari\BaseGameComponent.h">
+      <Filter>Engine\Components\Base</Filter>
+    </ClInclude>
     <ClInclude Include="LabKatamari\SphereComponent.h">
-      <Filter>Engine</Filter>
+      <Filter>Engine\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="LabKatamari\QuadComponent.h">
+      <Filter>Engine\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="LabKatamari\MeshRenderComponent.h">
+      <Filter>Engine\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="LabKatamari\DDS.h">
+      <Filter>Utils\Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="LabKatamari\DDSTextureLoader.h">
+      <Filter>Utils\Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="LabKatamari\DirectXHelpers.h">
+      <Filter>Utils\Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="LabKatamari\LoaderHelpers.h">
+      <Filter>Utils\Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="LabKatamari\ResourceFactory.h">
+      <Filter>Utils\Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="LabKatamari\PlatformHelpers.h">
+      <Filter>Utils</Filter>
     </ClInclude>
     <ClInclude Include="LabKatamari\Vertex.h">
-      <Filter>Utils</Filter>
+      <Filter>Utils\StructsAndEnums</Filter>
+    </ClInclude>
+    <ClInclude Include="LabKatamari\Keys.h">
+      <Filter>Utils\StructsAndEnums</Filter>
+    </ClInclude>
+    <ClInclude Include="LabKatamari\SceneConstantBuffer.h">
+      <Filter>Utils\StructsAndEnums</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

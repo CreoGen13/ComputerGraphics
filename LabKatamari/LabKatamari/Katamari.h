@@ -5,11 +5,11 @@
 class KatamariBallOutline;
 class LabKatamari;
 
-class KatamariBall :  public SphereComponent
+class Katamari :  public SphereComponent
 {
 protected:
     LabKatamari* kGame;
-    void UpdateSize(float absorbedSize);
+    void UpdateSize(float propSize);
 public:
     float rotationDrag;
     float rotationMaxSpeed;
@@ -18,7 +18,7 @@ public:
     DirectX::SimpleMath::Vector3 velocity;
     DirectX::BoundingSphere collision;
     float gameSize;
-    KatamariBall(Game* game);
+    Katamari(Game* game);
     void Initialize() override;
     void Draw() override;
     void Update() override;

@@ -21,7 +21,7 @@ CD3D11_RASTERIZER_DESC BaseRenderComponent::CreateRasterizerStateDesc()
 }
 
 BaseRenderComponent::BaseRenderComponent(Game* game)
-	: GameComponent(game), layout_(nullptr), rastState_(nullptr), vertexBuffer_(nullptr), indexBuffer_(nullptr),
+	: BaseGameComponent(game), layout_(nullptr), rastState_(nullptr), vertexBuffer_(nullptr), indexBuffer_(nullptr),
 	  strides_{}, offsets_{}, passThroughVs_(false), colorModePs_(false),
 	  topologyType_(D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST), textureFileName_(L"Textures/wood.dds"), samplerState_(nullptr),
 	  isShadowCasting_(true)

@@ -1,26 +1,26 @@
 ﻿#pragma once
 
-#include "GameComponent.h"
+#include "BaseGameComponent.h"
 #include "InputDevice.h"
 #include "SimpleMath.h"
 
-class GameComponent;
+class BaseGameComponent;
 class Game;
 class Camera;
 
-class OrbitCameraController
+class KatamariCameraController
 {
 protected:
     Game* game;
     Camera* camera;
-    GameComponent* target;
+    BaseGameComponent* target;
     DirectX::SimpleMath::Quaternion rotation;
     float radius;
     float sensitivityX;
     float sensitivityY;
 public:
     bool isLMBActivated;
-    OrbitCameraController(Game* g, Camera* c, GameComponent* t);
+    KatamariCameraController(Game* g, Camera* c, BaseGameComponent* t);
     void OnMouseMove(const InputDevice::MouseMoveEventArgs& args);
     void Update();
     DirectX::SimpleMath::Vector3 GetForward() const;

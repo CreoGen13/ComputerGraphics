@@ -38,13 +38,20 @@ void InputDevice::OnKeyDown(KeyboardInputEventArgs args)
 
 	auto key = static_cast<Keys>(args.VKey);
 
-	if (args.MakeCode == 42) key = Keys::LeftShift;
-	if (args.MakeCode == 54) key = Keys::RightShift;
+	if (args.MakeCode == 42)
+		key = Keys::LeftShift;
+	if (args.MakeCode == 54)
+		key = Keys::RightShift;
 	
-	if(Break) {
-		if(keys->count(key))	RemovePressedKey(key);
-	} else {
-		if (!keys->count(key))	AddPressedKey(key);
+	if(Break)
+	{
+		if(keys->count(key))
+			RemovePressedKey(key);
+	}
+	else
+	{
+		if (!keys->count(key))
+			AddPressedKey(key);
 	}
 }
 

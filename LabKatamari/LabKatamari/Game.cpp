@@ -29,7 +29,8 @@ LRESULT CALLBACK Game::WndProc(HWND hwnd, UINT umessage, WPARAM wparam, LPARAM l
 	{
 	case WM_KEYDOWN:
 		{
-			if (static_cast<unsigned int>(wparam) == 27) PostQuitMessage(0);
+			if (static_cast<unsigned int>(wparam) == 27)
+				PostQuitMessage(0);
 			return 0;
 		}
 	case WM_INPUT:
@@ -198,7 +199,7 @@ Game::~Game()  // NOLINT(modernize-use-equals-default)
 {
 	for (const auto c : components_)
 	{
-		c->~GameComponent();
+		c->~BaseGameComponent();
 	}
 }
 
@@ -387,7 +388,7 @@ void Game::PrepareResources()
 	swapDesc.OutputWindow = display_->hWnd;
 	swapDesc.Windowed = true;
 	swapDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_DISCARD;
-	swapDesc.Flags = DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH;
+	swapDesc.Flags = 0;/*DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH*/
 	swapDesc.SampleDesc.Count = 1;
 	swapDesc.SampleDesc.Quality = 0;
 
@@ -424,7 +425,7 @@ void Game::PrepareResources()
 	constBufPerSceneDesc.CPUAccessFlags = 0;
 	constBufPerSceneDesc.MiscFlags = 0;
 	constBufPerSceneDesc.StructureByteStride = 0;
-	constBufPerSceneDesc.ByteWidth = sizeof(PerSceneCb);
+	constBufPerSceneDesc.ByteWidth = sizeof(SceneConstantBuffer);
 
 	GetDevice()->CreateBuffer(&constBufPerSceneDesc, nullptr, perSceneCBuffer_.GetAddressOf());
 }

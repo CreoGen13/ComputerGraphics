@@ -1,15 +1,15 @@
-﻿#include "OrbitCameraController.h"
+﻿#include "KatamariCameraController.h"
 #include "Game.h"
 
 using namespace DirectX;
 using namespace SimpleMath;
 
-OrbitCameraController::OrbitCameraController(Game* g, Camera* c, GameComponent* t) : game(g), camera(c), target(t),
+KatamariCameraController::KatamariCameraController(Game* g, Camera* c, BaseGameComponent* t) : game(g), camera(c), target(t),
     rotation(Quaternion::Identity), radius(10.0f), sensitivityX(0.004f), sensitivityY(0.004f), isLMBActivated(true)
 {
 }
 
-void OrbitCameraController::OnMouseMove(const InputDevice::MouseMoveEventArgs& args)
+void KatamariCameraController::OnMouseMove(const InputDevice::MouseMoveEventArgs& args)
 {
     if (game->GetInputDevice()->IsKeyDown(Keys::LeftButton) || !isLMBActivated)
     {
@@ -22,19 +22,19 @@ void OrbitCameraController::OnMouseMove(const InputDevice::MouseMoveEventArgs& a
 }
 
 // ReSharper disable once CppMemberFunctionMayBeConst
-void OrbitCameraController::Update()
+void KatamariCameraController::Update()
 {
     camera->Position = target->GetPosition() - GetForward() * radius;
     camera->Up = Vector3::Transform(Vector3::Up, rotation);
     camera->Target = target->GetPosition();
 }
 
-Vector3 OrbitCameraController::GetForward() const
+Vector3 KatamariCameraController::GetForward() const
 {
     return Vector3::Transform(Vector3::Forward, rotation);
 }
 
-Vector3 OrbitCameraController::GetUp() const
+Vector3 KatamariCameraController::GetUp() const
 {
     return Vector3::Transform(Vector3::Up, rotation);
 }

@@ -4,7 +4,7 @@
 #include "BaseRenderComponent.h"
 #include <assimp/scene.h>
 
-class KatamariBall;
+class Katamari;
 
 class MeshRenderComponent : public BaseRenderComponent
 {
@@ -13,8 +13,6 @@ protected:
     void ProcessNode(aiNode* node, const aiScene* scene);
     void ProcessMesh(aiMesh* mesh, const aiScene* scene);
 public:
-    bool isPickedUp;
-    KatamariBall* kb;
     MeshRenderComponent(Game* g, const std::string& fileNameModel, const wchar_t* fileNameTexture);
     ~MeshRenderComponent() override = default;
     void Initialize() override;

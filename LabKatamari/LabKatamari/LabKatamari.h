@@ -1,18 +1,18 @@
 ﻿#pragma once
 
 #include "Game.h"
-#include "OrbitCameraController.h"
+#include "KatamariCameraController.h"
 
 class PropComponent;
-class KatamariBall;
+class Katamari;
 
 class LabKatamari : public Game
 {
 protected:
-    KatamariBall* ball;
-    OrbitCameraController* orbitCameraController{};
+    Katamari* katamari;
+    KatamariCameraController* cameraController{};
 public:
-    std::vector<PropComponent*> furniture {};
+    std::vector<PropComponent*> props {};
     LabKatamari();
     void Update() override;
 };

@@ -1,4 +1,4 @@
-﻿#include "KatamariBall.h"
+﻿#include "Katamari.h"
 #include "Game.h"
 #include "LabKatamari.h"
 #include "PropComponent.h"
@@ -6,9 +6,9 @@
 using namespace DirectX;
 using namespace SimpleMath;
 
-void KatamariBall::UpdateSize(float absorbedSize)
+void Katamari::UpdateSize(float propSize)
 {
-    float tmp = sqrtf(gameSize * gameSize + absorbedSize * absorbedSize);
+    float tmp = sqrtf(pow(gameSize, 2) + pow(propSize, 2));
     collision.Radius = tmp;
     position.y = tmp;
     rotationMaxSpeed = 0.1f / (tmp * tmp);
@@ -19,7 +19,7 @@ void KatamariBall::UpdateSize(float absorbedSize)
     gameSize = tmp;
 }
 
-KatamariBall::KatamariBall(Game* game) : SphereComponent(game, 1.0f, 32, 32, L"Textures/ava.dds"),
+Katamari::Katamari(Game* game) : SphereComponent(game, 1.0f, 32, 32, L"Textures/ava.dds"),
 velocity(Vector3::Zero), collision(position, 1.0f), gameSize(1.0f)
 {
     kGame = dynamic_cast<LabKatamari*>(game);
@@ -29,29 +29,29 @@ velocity(Vector3::Zero), collision(position, 1.0f), gameSize(1.0f)
     moveDrag = 5.0f;
 }
 
-void KatamariBall::Initialize()
+void Katamari::Initialize()
 {
     SphereComponent::Initialize(); 
 }
 
-void KatamariBall::Draw()
+void Katamari::Draw()
 {
     SphereComponent::Draw();
 }
 
-void KatamariBall::Update()
+void Katamari::Update()
 {
     collision.Center = position;
     
-    for (auto furn : kGame->furniture)
+    for (auto prop : kGame->props)
     {
-        if (collision.Intersects(furn->collision) && !furn->isPickedUp && gameSize > furn->gameSize)
+        if (collision.Intersects(prop->collision) && !prop->isPickedUp && gameSize > prop->gameSize)
         {
-            furn->isPickedUp = true;
-            furn->kb = this;
-            furn->initRelPos = furn->GetPosition() - GetPosition();
-            rotation.Inverse(furn->invKbRot);
-            UpdateSize(furn->gameSize);
+            prop->isPickedUp = true;
+            prop->katamari = this;
+            prop->initRelPos = prop->GetPosition() - GetPosition();
+            rotation.Inverse(prop->inverseKatamariRotation);
+            UpdateSize(prop->gameSize);
         }
     }
     
@@ -71,24 +71,24 @@ void KatamariBall::Update()
     position += velocity * game->DeltaTime();
 }
 
-void KatamariBall::Reload()
+void Katamari::Reload()
 {
     SphereComponent::Reload();
 }
 
-void KatamariBall::DestroyResources()
+void Katamari::DestroyResources()
 {
     SphereComponent::DestroyResources();
 }
 
-void KatamariBall::SetDirection(Vector3 dir)
+void Katamari::SetDirection(Vector3 dir)
 {
     Vector3 tmp = Vector3(dir.x, 0.0f, dir.z);
     tmp.Normalize();
     velocity = tmp * moveMaxSpeed;
 }
 
-void KatamariBall::SetPosition(Vector3 p)
+void Katamari::SetPosition(Vector3 p)
 {
     SphereComponent::SetPosition(p);
 }

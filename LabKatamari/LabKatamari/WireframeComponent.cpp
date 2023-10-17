@@ -1,10 +1,10 @@
-﻿#include "GridComponent.h"
+﻿#include "WireframeComponent.h"
 #include "Game.h"
 
 using namespace DirectX;
 using namespace SimpleMath;
 
-GridComponent::GridComponent(Game* g, float cellSize, int lineCount)
+WireframeComponent::WireframeComponent(Game* g, float cellSize, int lineCount)
 	: BaseRenderComponent(g)
 {
 	constexpr Vector4 color = Vector4(0.15f, 0.15f, 0.15f, 1.0f);

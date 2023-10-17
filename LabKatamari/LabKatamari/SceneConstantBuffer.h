@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include "SimpleMath.h"
 
-struct PerSceneCb
+struct SceneConstantBuffer
 {
     DirectX::SimpleMath::Vector4 LightPos;
     DirectX::SimpleMath::Vector4 LightColor;

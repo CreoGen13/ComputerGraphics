@@ -4,7 +4,7 @@
 
 class Game;
 
-class GameComponent
+class BaseGameComponent
 {
 protected:
 	Game* game;
@@ -15,8 +15,8 @@ protected:
 	virtual void SetRotation(DirectX::SimpleMath::Quaternion q) { rotation = q; }
 	virtual void SetScale(DirectX::SimpleMath::Vector3 s) { scale = s; }
 public:
-	GameComponent(Game* g);
-	virtual ~GameComponent() = default;
+	BaseGameComponent(Game* g);
+	virtual ~BaseGameComponent() = default;
 	virtual DirectX::SimpleMath::Vector3 GetPosition() const { return position; }
 	virtual DirectX::SimpleMath::Quaternion GetRotation() const { return rotation; }
 	virtual DirectX::SimpleMath::Vector3 GetScale() const { return scale; }
