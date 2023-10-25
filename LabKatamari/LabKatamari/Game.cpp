@@ -128,7 +128,7 @@ void Game::CreateCsmDepthTextureArray()
 	depthDescription.CPUAccessFlags = 0;
 	depthDescription.MiscFlags = 0;
 
-	auto res = device_->CreateTexture2D(&depthDescription, nullptr, shadowTexArr_.GetAddressOf());
+	auto res = device_->CreateTexture2D(&depthDescription, nullptr, shadowMapArray.GetAddressOf());
 
 	if (FAILED(res))
 	{
@@ -143,7 +143,7 @@ void Game::CreateCsmDepthTextureArray()
 	dViewDesc.Texture2DArray.FirstArraySlice = 0;
 	dViewDesc.Texture2DArray.ArraySize = 5;
 
-	res = device_->CreateDepthStencilView(shadowTexArr_.Get(), &dViewDesc, depthShadowDsv_.GetAddressOf());
+	res = device_->CreateDepthStencilView(shadowMapArray.Get(), &dViewDesc, depthShadowDsv_.GetAddressOf());
 
 	if (FAILED(res))
 	{
@@ -159,7 +159,7 @@ void Game::CreateCsmDepthTextureArray()
 	srvDesc.Texture2DArray.FirstArraySlice = 0;
 	srvDesc.Texture2DArray.ArraySize = 5;
 
-	res = device_->CreateShaderResourceView(shadowTexArr_.Get(), &srvDesc, depthShadowSrv_.GetAddressOf());
+	res = device_->CreateShaderResourceView(shadowMapArray.Get(), &srvDesc, depthShadowSrv_.GetAddressOf());
 	
 	if (FAILED(res))
 	{

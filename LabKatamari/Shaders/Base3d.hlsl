@@ -20,7 +20,7 @@ struct PS_IN
 	float4 worldPos : WORLDPOS;
 };
 
-cbuffer cbPerObject : register(b0)
+cbuffer objectConstantBuffer : register(b0)
 {
 	float4x4 gWorldViewProj;
 	float4x4 gWorld;
@@ -28,7 +28,7 @@ cbuffer cbPerObject : register(b0)
 	float4x4 gInvTrWorldView;
 };
 
-cbuffer cbPerScene : register(b0)
+cbuffer sceneConstantBuffer : register(b0)
 {
 	float4 lightPos;
 	float4 lightColor;

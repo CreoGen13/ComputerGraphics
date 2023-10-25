@@ -267,7 +267,7 @@ ID3D11GeometryShader* ResourceFactory::GetGeometryShader(std::string name)
     return gShaders_[name].Shader;
 }
 
-ID3DBlob* ResourceFactory::GetVertexShaderBC(std::string name)
+ID3DBlob* ResourceFactory::GetVertexShaderByteCode(std::string name)
 {
     return vShaders_[name].Bc;
 }

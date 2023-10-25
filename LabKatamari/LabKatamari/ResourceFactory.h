@@ -59,7 +59,7 @@ public:
     static ID3D11VertexShader* GetVertexShader(std::string name);
     static ID3D11PixelShader* GetPixelShader(std::string name);
     static ID3D11GeometryShader* GetGeometryShader(std::string name);
-    static ID3DBlob* GetVertexShaderBC(std::string name);
+    static ID3DBlob* GetVertexShaderByteCode(std::string name);
     static ID3DBlob* GetPixelShaderBC(std::string name);
     static ID3DBlob* GetGeometryShaderBC(std::string name);
     static const std::vector<Vertex>& GetPoints(std::string name);

@@ -60,8 +60,8 @@ void BaseRenderComponent::Initialize()
 	game->GetDevice()->CreateInputLayout(
 		inputElements,
 		3,
-		ResourceFactory::GetVertexShaderBC("base")->GetBufferPointer(),
-		ResourceFactory::GetVertexShaderBC("base")->GetBufferSize(),
+		ResourceFactory::GetVertexShaderByteCode("base")->GetBufferPointer(),
+		ResourceFactory::GetVertexShaderByteCode("base")->GetBufferSize(),
 		layout_.GetAddressOf());
 
 	D3D11_BUFFER_DESC vertexBufDesc;

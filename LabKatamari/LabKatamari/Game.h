@@ -49,7 +49,7 @@ protected:
 	Microsoft::WRL::ComPtr<ID3D11RenderTargetView> renderView_;
 	Microsoft::WRL::ComPtr<ID3D11Texture2D> depthStencilBuffer_;
 	Microsoft::WRL::ComPtr<ID3D11DepthStencilView> depthStencilView_;
-	Microsoft::WRL::ComPtr<ID3D11Texture2D> shadowTexArr_;
+	Microsoft::WRL::ComPtr<ID3D11Texture2D> shadowMapArray;
 	Microsoft::WRL::ComPtr<ID3D11DepthStencilView> depthShadowDsv_;
 	Microsoft::WRL::ComPtr<ID3D11ShaderResourceView> depthShadowSrv_;
 	Microsoft::WRL::ComPtr<ID3D11Buffer> perSceneCBuffer_;
